@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="myName"
+            type="com.example.aboutme.MyName"/>
+    </data>
 <LinearLayout
     android:orientation="vertical"
              android:layout_width="match_parent"
@@ -10,7 +15,7 @@
         android:id="@+id/name_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/myName"
+        android:text="@={myName.name}"
         android:textAlignment="center"
         style="@style/NameStyle" />
 
@@ -39,7 +44,7 @@
         android:id="@+id/nickname_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="@={myName.nickname}"
         android:textAlignment="center"
         android:textSize="@dimen/text_size"
         android:visibility="gone" />
